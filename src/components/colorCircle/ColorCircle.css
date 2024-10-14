@@ -1,0 +1,42 @@
+.color-circle {
+  position: relative;
+  display: inline-block;
+}
+.color-circle:hover {
+  cursor: pointer;
+}
+.color-circle:hover .color-code {
+  display: block;
+}
+
+.color-code {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+
+  transform: translateY(-50%);
+  padding: 6px;
+  padding-right: 32px;
+  padding-left: 14px;
+  border-radius: 999px;
+  background-color: #30303060;
+  color: #ffffffaa;
+  border: 1px solid #ffffff10;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: -1;
+  font-size: 12px;
+  font-family: "Inter-VariableFont_opsz,wght";
+}
+
+.copied-message {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}

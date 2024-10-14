@@ -1,0 +1,66 @@
+/* Marquee.css */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  height: 101%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.marquee-wrapper {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.marquee-content {
+  display: flex;
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-left: 32px;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 2;
+}
+
+.marquee-container::before {
+  left: 0;
+  transform: translateX(-20px);
+  background: linear-gradient(to left, #1f1a1540, #1f1a15, #1f1a15);
+  filter: blur(8px);
+  position: absolute;
+  height: 101%;
+  width: 80px;
+  top: 0;
+}
+
+.marquee-container::after {
+  right: 0;
+  transform: translateX(20px);
+  background: linear-gradient(to right, #1f1a1540, #241e19, #241e19);
+  filter: blur(6px);
+  position: absolute;
+  height: 101%;
+  width: 80px;
+  top: 0;
+}
+
+@media (min-width: 1406px) {
+  .marquee-item {
+    margin-left: 52px;
+  }
+}
