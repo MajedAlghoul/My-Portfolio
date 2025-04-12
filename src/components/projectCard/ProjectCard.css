@@ -1,0 +1,18 @@
+.s-link-hover {
+    background: linear-gradient(to right, #ffffff10, #ffffff10 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+}
+
+.s-link-hover:hover {
+    animation: slide-bg 1s forwards;
+}
+
+@keyframes slide-bg {
+    from {
+        background-position: -100% 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}

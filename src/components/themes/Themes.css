@@ -67,3 +67,10 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+
+@media (max-width: 499px) {
+  .themes-outer {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}

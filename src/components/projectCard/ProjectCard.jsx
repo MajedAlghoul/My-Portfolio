@@ -2,7 +2,17 @@ import GlassContainer from "../glassContainer/GlassContainer.jsx";
 import "./ProjectCard.css";
 import React from "react";
 import * as svgs from "../../assets/Svgs.jsx";
-export default function ProjectCard({ linkk, title, desc, year, langs }) {
+
+export default function ProjectCard({
+  linkk,
+  sLinkk,
+  title,
+  desc,
+  year,
+  langs,
+  displayImg,
+}) {
+  const [sLinkkHover, setSLinkkHover] = React.useState(false);
   return (
     <a target="_blank" href={linkk} style={{ textDecoration: "none" }}>
       <GlassContainer w="280px" h="auto" c="14px" o="">
@@ -15,6 +25,13 @@ export default function ProjectCard({ linkk, title, desc, year, langs }) {
             marginTop: "16px",
           }}
         >
+          {displayImg ? (
+            <img
+              src={displayImg}
+              style={{ width: "100%", marginBottom: "16px" }}
+            />
+          ) : null}
+
           <div
             style={{ color: "#ffffff", fontSize: "18px", marginBottom: "4px" }}
           >
@@ -39,7 +56,27 @@ export default function ProjectCard({ linkk, title, desc, year, langs }) {
             }}
           >
             <div>{year}</div>
-            {svgs.diagonalArrow}
+            <a
+              href={sLinkk}
+              target="_blank"
+              style={{ textDecoration: "none", color: "#ffffff60" }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                  borderRadius: "999px",
+                  paddingLeft: "8px",
+                }}
+                className={`${sLinkkHover ? "s-link-hover" : ""}`}
+                onMouseEnter={() => setSLinkkHover(true)}
+                onMouseLeave={() => setSLinkkHover(false)}
+              >
+                <span>Github</span>
+                {svgs.diagonalArrow}
+              </div>
+            </a>
           </div>
         </div>
       </GlassContainer>

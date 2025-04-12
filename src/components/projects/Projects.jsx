@@ -3,10 +3,32 @@ import "./Projects.css";
 import React from "react";
 import * as svgs from "../../assets/Svgs.jsx";
 import ProjectCard from "../projectCard/ProjectCard.jsx";
+import tripplannerimg from "../../assets/tripplannerimg.png";
+import polarityanalyzerimg from "../../assets/polarityanalyzerimg.png";
 export default function Projects() {
   return (
     <div className="projects-outer">
       <Grid gridType="projects">
+        <ProjectCard
+          linkk="https://majedalghoul.github.io/polarity/polarityanalyzer"
+          sLinkk={"https://github.com/MajedAlghoul/udacity-frontend-project4"}
+          title="Article Polarity Analyzer"
+          desc="Analyze the polarity of an article using ML"
+          year="2025"
+          langs={[svgs.jsLogo, svgs.gitLogo, svgs.vsCodeLogo]}
+          displayImg={polarityanalyzerimg}
+        ></ProjectCard>
+        <ProjectCard
+          linkk="https://majedalghoul.github.io/tripplanner/tripplanner"
+          sLinkk={
+            "https://github.com/MajedAlghoul/udacity-frontend-project5-final"
+          }
+          title="Trip Planner"
+          desc="Plan your trips and destinations"
+          year="2025"
+          langs={[svgs.jsLogo, svgs.gitLogo, svgs.vsCodeLogo]}
+          displayImg={tripplannerimg}
+        ></ProjectCard>
         <ProjectCard
           linkk="https://github.com/MajedAlghoul/material-newtab"
           title="Material Newtab"
